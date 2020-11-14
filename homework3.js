@@ -1,11 +1,11 @@
 describe('Secret number', () => {
+  let hodnota, secretNumber, formular, overeni
   before(() => { //muzes zmenit na beforeEach, pokud je potreba
     browser.url('https://automation.cervik.repl.co/inputs.html')
-    let hodnota, secretNumber, formular, overeni
+    
    })
 
   it('confirmation appears after validating correct secret number', () => {
-    // DOPLN
     secretNumber = browser.$('[name="secret"]')
     hodnota = (secretNumber.getValue())
     formular =  browser.$('input#secretNumberInput').addValue(hodnota)
