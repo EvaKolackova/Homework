@@ -23,7 +23,6 @@ describe('Secret number', () => {
 
 
   it('error appears after validating empty secret number', () => {
-    formular =  browser.$('input#secretNumberInput').addValue()
     browser.$("button#checkSecretNumber").click()
     overeni = browser.$('small#passwordHelpBlock')
     expect(overeni).toHaveText("Super secret je super špatně.")
